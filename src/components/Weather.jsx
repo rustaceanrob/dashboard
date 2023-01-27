@@ -43,7 +43,7 @@ export default function Weather({location, visibility}) {
                                     <div className="text-white uppercase font-bold text-md">
                                         {weather.main ? <h1>{weather.main.temp.toFixed()} °F</h1> : null}
                                     </div>
-                                    <div className="text-white uppercase text-sm pt-4">
+                                    <div className="text-white uppercase text-sm mt-4">
                                         {weather.weather ? <p>{weather.weather[0].description}</p> : null}
                                     </div>
                                     <div className="text-white uppercase text-sm">
@@ -57,7 +57,7 @@ export default function Weather({location, visibility}) {
                                 <div className="animate-pulse">
                                     <div className="rounded-xl bg-slate-200 flex w-20 h-4 m-2"></div>
                                     <div className="rounded-xl bg-slate-200 flex w-20 h-2 m-2"></div>
-                                    <div className="rounded-xl pt-2"></div>
+                                    <div className="rounded-xl pt-4"></div>
                                     <div className="rounded-xl bg-slate-200 flex w-20 h-2 m-2"></div>
                                     <div className="rounded-xl bg-slate-200 flex w-20 h-2 m-2"></div>
                                     <div className="rounded-xl bg-slate-200 flex w-20 h-2 m-2"></div>
@@ -67,7 +67,8 @@ export default function Weather({location, visibility}) {
                      </div>
 
                 ) : (
-                    <div>
+                    <div className='mt-4 invisible'>
+                        content
                     </div>
                 )
             }

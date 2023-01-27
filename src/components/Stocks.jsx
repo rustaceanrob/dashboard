@@ -18,13 +18,13 @@ export default function Stocks({visibility}) {
     }, [])
 
     return (
-        <div className='text-white m-auto hidden md:flex'>
+        <div className='text-white m-auto hidden items-start md:flex'>
                 {
                     visibility ? (
                         <div>
                             {
                                 prices ? (
-                                    <div className='ml-20'>
+                                    <div className=''>
                                         {stockList.map((stock) => {
                                             return (
                                                 <div className='flex flex-row grid grid-cols-2 justify-center items-center'>
@@ -41,7 +41,7 @@ export default function Stocks({visibility}) {
                                         })}
                                     </div>
                                 )   : (
-                                    <div className='ml-20'>
+                                    <div className=''>
                                         {stockList.map((stock) => {
                                             return (
                                                 <div className='flex flex-row grid grid-cols-2 justify-center items-center'>
