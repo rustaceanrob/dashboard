@@ -2,6 +2,7 @@ import React from 'react'
 import { AiOutlineGoogle } from 'react-icons/ai'
 
 export default function SearchBar() {
+
   return (
     <div className='flex text-white col-span-3 justify-center items-center'>
         <form role="search" method="get" id="searchform" class="searchform" action="https://www.google.co.uk/search?hl=en-GB&source=hp&q=" target="_blank">

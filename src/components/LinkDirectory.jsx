@@ -2,7 +2,7 @@ import React from 'react'
 import { GrHadoop } from 'react-icons/gr'
 import { SiAmazonaws, SiAwsamplify, SiVuedotjs,
     SiGmail, SiFirebase, SiGooglecloud, SiStackoverflow, SiApachespark,
-    SiGooglecolab, SiReact, SiGithub, SiLinkedin, SiElectron,
+    SiGooglecolab, SiReact, SiGithub, SiLinkedin, SiElectron, SiHeroku,
     SiYoutube ,SiGooglemeet, SiZoom, SiTailwindcss, SiTensorflow, SiPytorch,
     SiPandas, SiScikitlearn, SiBootstrap, SiAngularjs, SiTwitter ,SiNuxtdotjs} from 'react-icons/si'
 
@@ -28,6 +28,7 @@ export default function LinkDirectory() {
             <a href='https://getbootstrap.com/docs/4.1/getting-started/introduction/' target="_blank"><SiBootstrap size={25} className="m-2 cursor-pointer hover:scale-110 duration-100 lg:flex hidden"/></a>
             <a href='https://vuejs.org/guide/introduction.html' target="_blank"><SiVuedotjs size={25} className="m-2 cursor-pointer hover:scale-110 duration-100 md:flex hidden"/></a>
             <a href='https://stackoverflow.com/' target="_blank"><SiStackoverflow size={25} className="m-2 cursor-pointer hover:scale-110 duration-100"/></a>
+            <a href='https://dashboard.heroku.com/' target="_blank"><SiHeroku size={25} className="m-2 cursor-pointer hover:scale-110 duration-100 xl:flex hidden"/></a>
             <a href='https://github.com/' target="_blank"><SiGithub size={25} className="m-2 cursor-pointer hover:scale-110 duration-100"/></a>
             <a href='https://twitter.com/?lang=en' target="_blank"><SiTwitter size={25} className="m-2 cursor-pointer hover:scale-110 duration-100 md:flex hidden"/></a>
             <a href='https://www.linkedin.com/feed/' target="_blank"><SiLinkedin size={25} className="m-2 cursor-pointer hover:scale-110 duration-100"/></a>
