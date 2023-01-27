@@ -19,10 +19,14 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts build && node server/index.js",
+    "start": "node server/index.js",
+    "local": "react-scripts build && node server/index.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "engines": {
+    "node": "16.14.2"
   },
   "eslintConfig": {
     "extends": [
