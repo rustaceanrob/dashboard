@@ -5,20 +5,25 @@ import BackgroundImg from './components/BackgroundImg';
 import GridManager from './components/GridManager';
 
 function App() {
-  const [mode, setMode] = useState();
+  const [mode, setMode] = useState(false);
   
   useEffect(() => {
-    window.matchMedia('(prefers-color-scheme: dark)')
-      .addEventListener('change', event => {
-        const colorScheme = event.matches ? "dark" : "light";
-        setMode(colorScheme);
-      })
+    const storedMode = localStorage.getItem('darkMode')
+      if (storedMode) {
+          setMode(JSON.parse(storedMode))
+      } 
   }, [mode])
+
+  function toggleMode() {
+    setMode(!mode)
+    const stored = mode ? "false" : "true"
+    localStorage.setItem('darkMode', stored)
+  } 
 
   return (
     <div>
       <BackgroundImg mode={mode}/>
-      <GridManager/>
+      <GridManager dark={mode} toggleMode={toggleMode}/>
     </div>
   );
 }

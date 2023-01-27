@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { CiSettings } from 'react-icons/ci'
 
 
-export default function Settings({weatherState, toggleWeatherState, stocksState, toggleStocksState, setNewLocation}) {
+export default function Settings({weatherState, toggleWeatherState, stocksState, toggleStocksState, setNewLocation, dark, toggleMode}) {
     const [dropDown, setDropDown] = useState(false)
     
     function onSettingsClick() {
@@ -28,7 +28,7 @@ export default function Settings({weatherState, toggleWeatherState, stocksState,
                             <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-200 dark:peer-focus:ring-blue-800/50 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
                             <span class="ml-3 text-md font-medium text-white dark:text-gray-300 font-lato font">Weather</span>
                         </label>
-                        <label class="relative inline-flex items-center mt-4 pb-2 cursor-pointer">
+                        <label class="relative inline-flex items-center mt-4 cursor-pointer">
                             {
                                 stocksState ? (
                                     <input checked type="checkbox" value="" class="sr-only peer" onClick={toggleStocksState}/>
@@ -38,6 +38,17 @@ export default function Settings({weatherState, toggleWeatherState, stocksState,
                             }
                             <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-200 dark:peer-focus:ring-blue-800/50 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
                             <span class="ml-3 text-md font-medium text-white dark:text-gray-300 font-lato">Indices</span>
+                        </label>
+                        <label class="relative inline-flex items-center mt-4 pb-2 cursor-pointer">
+                            {
+                                dark ? (
+                                    <input checked type="checkbox" value="" class="sr-only peer" onClick={toggleMode}/>
+                                ) : (
+                                    <input type="checkbox" value="" class="sr-only peer" onClick={toggleMode}/>
+                                )
+                            }
+                            <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-200 dark:peer-focus:ring-blue-800/50 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                            <span class="ml-3 text-md font-medium text-white dark:text-gray-300 font-lato">Dark</span>
                         </label>
                     </div>
                 ) : (

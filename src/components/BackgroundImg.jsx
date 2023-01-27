@@ -5,7 +5,7 @@ import Dark from "../assets/images/forrest3.jpeg"
 export default function BackgroundImg({mode}) {
     const [image, setImage] = useState()
     useEffect(() => {
-        if (mode === "dark") {
+        if (mode) {
             setImage(Dark)
         } else {
             setImage(Light)

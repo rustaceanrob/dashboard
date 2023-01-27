@@ -7,7 +7,7 @@ import Stocks from './Stocks'
 import Settings from './Settings'
 
 
-export default function GridManager() {
+export default function GridManager({dark, toggleMode}) {
     const [location, setLocation] = useState("San Diego")
     const [showWeather, setShowWeather] = useState(true)
     const [showStocks, setShowStocks] = useState(true)
@@ -53,7 +53,7 @@ export default function GridManager() {
             <Stocks visibility={showStocks}/>
             <SearchBar/>
             <LinkDirectory/>
-            <Settings weatherState={showWeather} toggleWeatherState={toggleWeather} stocksState={showStocks} toggleStocksState={toggleStocks} setNewLocation={newLocation}/>
+            <Settings weatherState={showWeather} toggleWeatherState={toggleWeather} stocksState={showStocks} toggleStocksState={toggleStocks} setNewLocation={newLocation} dark={dark} toggleMode={toggleMode}/>
         </div>
     )
 }
