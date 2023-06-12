@@ -1,1 +1,1 @@
-Browser Agnostic Start Page
+Start page for Chrome
